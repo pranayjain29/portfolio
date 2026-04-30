@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranay Jain — Portfolio</title>
+  <meta name="description" content="Data & AI Automation Analyst. Building systems that turn noise into signal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="progress-bar"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero"       class="nav-link">Index</a>
+    <a href="#work"       class="nav-link">Work</a>
+    <a href="#projects"   class="nav-link">Projects</a>
+    <a href="#skills"     class="nav-link">Skills</a>
+    <a href="#writing"    class="nav-link">Writing</a>
+    <a href="#contact"    class="nav-link">Contact</a>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-inner wrapper">
+      <div class="hero-index-label" id="hero-label"></div>
+      <h1 id="hero-name"></h1>
+      <p  id="hero-title-line"></p>
+      <p  id="hero-tagline"></p>
+      <div class="hero-cta">
+        <a id="hero-cta-projects" href="#projects" class="btn-primary">View Projects</a>
+        <a id="hero-cta-resume"   href="#"         class="btn-ghost" download>Download Resume</a>
+      </div>
+    </div>
+
+    <!-- STATS TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker" id="ticker"></div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────── -->
+  <section id="about" class="wrapper section-pad">
+    <div class="section-header reveal">
+      <span class="section-num">00</span>
+      <span class="section-title">About</span>
+    </div>
+    <div class="about-grid">
+      <p id="about-text" class="about-body reveal"></p>
+      <div class="about-meta reveal" style="transition-delay:.1s">
+        <div class="meta-row" id="about-location"></div>
+        <div class="meta-row" id="about-email"></div>
+        <div class="about-links" id="about-links"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WORK EXPERIENCE ───────────────────────────────── -->
+  <section id="work" class="wrapper section-pad">
+    <div class="section-header reveal">
+      <span class="section-num">01</span>
+      <span class="section-title">Work Experience</span>
+    </div>
+    <div id="experience-list" class="timeline"></div>
+  </section>
+
+  <!-- ─── PROJECTS ──────────────────────────────────────── -->
+  <section id="projects" class="section-pad">
+    <div class="wrapper">
+      <div class="section-header reveal">
+        <span class="section-num">02</span>
+        <span class="section-title">Projects</span>
+      </div>
+    </div>
+    <div id="projects-grid" class="projects-grid wrapper"></div>
+  </section>
+
+  <!-- ─── SKILLS ────────────────────────────────────────── -->
+  <section id="skills" class="wrapper section-pad">
+    <div class="section-header reveal">
+      <span class="section-num">03</span>
+      <span class="section-title">Capabilities</span>
+    </div>
+    <div id="skills-canvas" class="skills-canvas"></div>
+  </section>
+
+  <!-- ─── EDUCATION & CERTS ─────────────────────────────── -->
+  <section id="education" class="wrapper section-pad">
+    <div class="section-header reveal">
+      <span class="section-num">04</span>
+      <span class="section-title">Education & Certifications</span>
+    </div>
+    <div class="edu-certs-grid">
+      <div id="education-block" class="edu-block reveal"></div>
+      <div id="certs-list"      class="certs-block reveal" style="transition-delay:.1s"></div>
+    </div>
+  </section>
+
+  <!-- ─── WRITING / BLOG ────────────────────────────────── -->
+  <section id="writing" class="wrapper section-pad">
+    <div class="section-header reveal">
+      <span class="section-num">05</span>
+      <span class="section-title">Writing</span>
+    </div>
+    <div id="blog-posts" class="blog-grid"></div>
+    <div class="blog-footer reveal">
+      <a id="blog-all-link" href="#" target="_blank" class="btn-ghost" style="margin-top:24px">
+        Read all posts →
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────── -->
+  <section id="contact" class="wrapper section-pad">
+    <div class="section-header reveal">
+      <span class="section-num">06</span>
+      <span class="section-title">Contact</span>
+    </div>
+    <div class="contact-inner reveal">
+      <p class="contact-line" id="contact-tagline"></p>
+      <div class="contact-links" id="contact-links"></div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────── -->
+  <footer class="wrapper">
+    <div class="footer-inner">
+      <span id="footer-name" class="footer-name"></span>
+      <span id="footer-location" class="footer-loc"></span>
+    </div>
+  </footer>
+
+  <!-- ─── PROJECT MODAL ─────────────────────────────────── -->
+  <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+    <div class="modal-panel" role="dialog">
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M1 1l16 16M17 1L1 17" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
