@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── 10. RENDER CONTACT ──────────────────────────────────
   (function renderContact() {
     document.getElementById('contact-tagline').textContent =
-      "Open to roles in Chennai. Let's talk if you're building something that should exist.";
+      "Open to roles. Let's talk if you're building something that should exist.";
 
     const contactLinks = [
       { icon: '✉', label: D.personal.email,   href: `mailto:${D.personal.email}` },
