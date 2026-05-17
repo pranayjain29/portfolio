@@ -80,7 +80,7 @@ const DATA = {
         "8 focused microservices, SOLID principles - from 2,200-line monolith to clean architecture",
         "Deployed on GCP Cloud Run, CI/CD via Cloud Build, personalised learning paths"
       ],
-      github:   "https://engrain-frontend-964650672343.asia-south1.run.app/",
+      github:   "https://engrain-frontend-155584388807.asia-south1.run.app/",
       demo:     "",
       color:    "#5b7fff"
     },
